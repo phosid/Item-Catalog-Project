@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<style>
+
+
+</style>
+
+
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" style="font-family: Raleway; color: #F64C72; font-size: 30px; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: .15em; text-shadow: 2px 2px #553D67;">Anime Nation</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/">Home</a>
+        <a class="mdl-navigation__link" href="/catalog/4/">Action/Adventure</a>
+        <a class="mdl-navigation__link" href="/catalog/3/">Comedy</a>
+        <a class="mdl-navigation__link" href="/catalog/2/">Psychological Horror/Thriller</a>
+        <a class="mdl-navigation__link" href="/catalog/1/">Sports</a>
+        <a class="mdl-navigation__link" href="/catalog/5/">Fantasy/Magic</a>
+        <!-- Accent-colored raised button with ripple -->
+        <a button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" class="mdl-navigation__link" href="/login">Login
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title" style="font-weight: bold;">Anime Nation</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/">Home</a>
+      <a class="mdl-navigation__link" href="/catalog/4/">Action/Adventure</a>
+      <a class="mdl-navigation__link" href="/catalog/3/">Comedy</a>
+      <a class="mdl-navigation__link" href="/catalog/2/">Psychological Horror/Thriller</a>
+      <a class="mdl-navigation__link" href="/catalog/1/">Sports</a>
+      <a class="mdl-navigation__link" href="/catalog/5/">Fantasy/Magic</a>
+      <a class="mdl-navigation__link" href="/login">Login</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->
+<body>
+  <h1 style="text-align: center; font-family: Raleway; color: #05386B; font-size: 30px; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: .15em; text-shadow: 2px 2px white;">New Anime Show</h1>
+
+  <form action="{{ url_for('newAnimeShow', genre_id = genre_id) }}" method = 'POST'>
+
+    <p>Name:</p>
+    <input type='text' size='30' name = 'name'>
+    <p>Year:</p>
+    <input type='text' size='4' name = 'year'>
+    <p>Description:</p>
+    <input type='text' size='80' name = 'description'>
+    <input type= 'submit' value='Create'>
+    <a href= '{{url_for('animeCatalog', genre_id = genre_id)}}'>Cancel</a>
+  </form>
+
+
+</body>
+
+    </div>
+  </main>
+</div>
+</html>
