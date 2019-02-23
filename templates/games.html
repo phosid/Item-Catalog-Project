@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row top-menu">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 text-right">
+					</div>
+	</div>
+	<div class="row divider blue">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<h1 style="font-family: Raleway; color: white; font-size: 30px; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: .15em; text-shadow: 2px 2px #553D67;">Game Street</h1>
+		</div>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+	
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 padding-none">
+			<a href="{{url_for('newGame')}}">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Add Game
+</button>
+			</a>
+			
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	{% for game in games %}
+		<a href = "{{url_for('showGameItems', game_id = game.id)}}">
+			<div class="row">
+				<div class="col-md-1"></div>
+					<div class="col-md-10 restaurant-list">
+						<h3>{{game.name}}</h3>
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+		</a>
+	{% endfor %}
+{% endblock %}

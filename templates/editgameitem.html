@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit Game Item</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+				<div class="form-group">
+	<form action="#" method = "post">
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+
+					<label for="description">Description:</label>
+					<textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+
+					<label for="price">Price:</label>
+					<div class="input-group">
+						<input type ="text" maxlength="10" class="form-control" name="price" value="{{item.price}}">
+					</div>
+					
+
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  					Save
+					</button>
+	</form>
+					<a href = "{{ url_for('showGameItems',game_id = game_id)}}">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  						Cancel
+						</button>
+					</a>
+				</div>
+		</div>
+	</div>
+{% endblock %}

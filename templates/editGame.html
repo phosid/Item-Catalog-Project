@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit {{game.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="{{ url_for('editGame',game_id = game.id)}}" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" class="form-control" name="name" value="{{game.name }}">
+					<div class="padding-bottom"></div>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Save
+</button>
+				</div>
+			</form>
+					<a href = "{{url_for('showGames')}}">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Cancel
+</button>
+					</a>
+				
+		</div>
+	</div>
+{% endblock %}
