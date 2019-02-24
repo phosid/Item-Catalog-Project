@@ -15,3 +15,6 @@ Specifically, the web application showcases a "Game Catalog" that allows users t
 1. From your terminal, inside the **/vagrant** subdirectory, run the command `vagrant up`.
 2. Once it is finished, run `vagrant ssh` to connect to the virtual machine.
 3. `cd` to the appropriate folder and run `python project.py` to load application on http://localhost:8000.
+
+## Citation for personal image use:
+Riot Games. "League of Legends Youtube Banner". http://www.lol-wallpapers.com/artwork/league-of-legends-youtube-banner-2/.
