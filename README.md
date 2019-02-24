@@ -1,6 +1,6 @@
 # Item-Catalog-Project
 ## Project Overview:
-This is the second project in the Udacity Full-Stack Web Development Nanodegree program. In this project, I develop a web application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. The web application has CRUD functionality (Create, Read, Update, and Delete) so registered users will have the ability to post, edit and delete their own items.
+This is the second project in the Udacity Full-Stack Web Development Nanodegree program. In this project, I develop a web application that provides a list of items within a variety of categories as well as provide a user registration and authentication system. The web application has CRUD functionality (Create, Read, Update, and Delete) so registered users will have the ability to post, edit and delete their own items. The web app also has JSON endpoints that displays information for any arbitrary item or category.
 The web app was built using the Python Flask Framework and SQLAlchemy to connect with the database using object-relational mapping (ORM). The front-end uses Jinja2 to render the HTML output, Material Design Lite and CSS for layout design.
 
 Specifically, the web application showcases a "Game Catalog" that allows users to add new games, and post, edit, or delete a variety of items under the games.
