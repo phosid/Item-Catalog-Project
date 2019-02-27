@@ -5,11 +5,12 @@ The web app was built using the Python Flask Framework and SQLAlchemy to connect
 
 Specifically, the web application showcases a "Game Catalog" that allows users to add new games, and post, edit, or delete a variety of items under the games.
 
-## Installation Requirements:
+## Installation Requirements and Database Setup:
 1. Install [Virtual Box](https://www.virtualbox.org/).
 2. Install [Vagrant](https://www.vagrantup.com/downloads.html).
 3. Download the [VM Configuration](https://github.com/udacity/fullstack-nanodegree-vm).
-4. Run `python project.py` to run application on http://localhost:8000.
+4. Run `python database_setup.py` to create database.
+5. Run `lotsofgames.py` to load the database with user and preset games and game items.
 
 ## Starting the Virtual Machine & Running Application:
 1. From your terminal, inside the **/vagrant** subdirectory, run the command `vagrant up`.
