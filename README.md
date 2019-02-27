@@ -9,8 +9,9 @@ Specifically, the web application showcases a "Game Catalog" that allows users t
 1. Install [Virtual Box](https://www.virtualbox.org/).
 2. Install [Vagrant](https://www.vagrantup.com/downloads.html).
 3. Download the [VM Configuration](https://github.com/udacity/fullstack-nanodegree-vm).
-4. Run `python database_setup.py` to create database.
-5. Run `lotsofgames.py` to load the database with user and preset games and game items.
+4. Change directory to the appropriate folder.
+5. Run `python database_setup.py` in the terminal to create database.
+6. Run `python lotsofgames.py` to load the database with user and preset games and game items.
 
 ## Starting the Virtual Machine & Running Application:
 1. From your terminal, inside the **/vagrant** subdirectory, run the command `vagrant up`.
